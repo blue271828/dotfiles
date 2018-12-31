@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if type ghq &>/dev/null && type fzf &>/dev/null; then
   repo() {
