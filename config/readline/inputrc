@@ -1,4 +1,9 @@
 $if bash
   set completion-ignore-case on
   set mark-symlinked-directories on
+
+  # for type japanese
+  set input-meta on
+  set output-meta on
+  set convert-meta off
 $endif
