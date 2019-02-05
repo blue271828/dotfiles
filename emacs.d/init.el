@@ -1,17 +1,29 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
+;; Base settings
+(define-key key-translation-map [?\C-h] [?\C-?])
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 
-(when (not (package-installed-p 'use-package))
+
+;; Add some package-archives
+(require 'package)
+(setq package-archives '(("melpa" . "http://melpa.org/packages/")))
+(package-initialize)
+(package-refresh-contents)
+
+
+;; Setup use-package
+(unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
 
+
+;; Setup editorconfig-mode
+(unless (package-installed-p 'editorconfig)
+  (package-install 'editorconfig))
 (use-package editorconfig
-	     :ensure t)
-(editorconfig-mode 1)
+  :ensure t
+  :config
+  (editorconfig-mode 1))
 
 
-(define-key key-translation-map [?\C-h] [?\C-?])
-(setq make-backup-files nil)
-(setq auto-save-default nil)
