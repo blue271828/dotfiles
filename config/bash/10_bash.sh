@@ -10,14 +10,17 @@ __prompt_command() {
   local Red='\[\e[31m\]'
   local Gre='\[\e[32m\]'
   local Yel='\[\e[33m\]'
+  local Cyn='\[\e[36m\]'
+
+  PS1="${Cyn}\u@\H:${Yel}\w "
 
   if [ $EXIT == 0 ]; then
-    PS1="${Gre}${EXIT} ->"
+    PS1+="${Gre}(${EXIT})"
   else
-    PS1="${Red}${EXIT} ->"
+    PS1+="${Red}(${EXIT})"
   fi
 
-  PS1+=" ${Gre}\u@\H:${Yel}\w${RCol}\n\\$ \[$(tput sgr0)\]"
+  PS1+="\n${RCol}\\$ \[$(tput sgr0)\]"
 }
 
 
