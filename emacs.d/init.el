@@ -27,3 +27,6 @@
   (editorconfig-mode 1))
 
 
+;; Setup go-mode
+(unless (package-installed-p 'go-mode)
+  (package-install 'go-mode))
