@@ -31,3 +31,9 @@
 (unless (package-installed-p 'go-mode)
   (package-refresh-contents)
   (package-install 'go-mode))
+
+
+;; Setup yaml-mode
+(unless (package-installed-p 'yaml-mode)
+  (package-refresh-contents)
+  (package-install 'yaml-mode))
