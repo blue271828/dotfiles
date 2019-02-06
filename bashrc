@@ -10,3 +10,8 @@ export XDG_DATA_HOME=$XDG_LOCAL_HOME/share
 for script in $(ls -d $XDG_CONFIG_HOME/bash/*.sh); do
   source $script
 done
+
+# Load any shell functions if files exist.
+for func in $(ls -d $XDG_CONFIG_HOME/bash/func/*.sh); do
+  source $func
+done
