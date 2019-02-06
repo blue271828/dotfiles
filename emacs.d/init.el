@@ -8,7 +8,6 @@
 (require 'package)
 (setq package-archives '(("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
-(package-refresh-contents)
 
 
 ;; Setup use-package
@@ -20,6 +19,7 @@
 
 ;; Setup editorconfig-mode
 (unless (package-installed-p 'editorconfig)
+  (package-refresh-contents)
   (package-install 'editorconfig))
 (use-package editorconfig
   :ensure t
@@ -29,4 +29,5 @@
 
 ;; Setup go-mode
 (unless (package-installed-p 'go-mode)
+  (package-refresh-contents)
   (package-install 'go-mode))
