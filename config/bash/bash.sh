@@ -25,6 +25,7 @@ __prompt_command() {
 
 
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
+export LANG="ja_JP.UTF-8"
 
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
