@@ -6,4 +6,7 @@ $if bash
   set input-meta on
   set output-meta on
   set convert-meta off
+
+  # Enable to be autocompletion with one tab
+  set show-all-if-ambiguous on
 $endif
