@@ -6,6 +6,7 @@ brew "emacs", restart_service: true
 brew "fzf"
 brew "ghq"
 brew "git-lfs"
+brew "global"
 brew "hugo"
 brew "jhead"
 brew "latexdiff"
