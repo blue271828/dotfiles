@@ -2,7 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-brew "bash-completion"
+brew "bash-completion@2"
 brew "emacs", restart_service: true
 brew "fzf"
 brew "ghq"
