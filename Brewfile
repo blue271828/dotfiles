@@ -6,6 +6,7 @@ brew "bash-completion@2"
 brew "emacs", restart_service: true
 brew "fzf"
 brew "ghq"
+brew "go"
 brew "git-lfs"
 brew "global"
 brew "hugo"
