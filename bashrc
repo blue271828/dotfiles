@@ -15,3 +15,7 @@ done
 for func in $(ls -d $XDG_CONFIG_HOME/bash/func/*.sh); do
   source $func
 done
+
+# Hide bash deprecation warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
