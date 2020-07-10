@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 brew "bash-completion@2"
+brew "bash"
 brew "coreutils"
 brew "emacs", restart_service: true
 brew "fzf"
